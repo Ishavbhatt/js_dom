@@ -7,10 +7,36 @@
     <title>DOM Basics</title>
   </head>
   <body>
-    <body>
       <h1>Document Object Model</h1>
     <script>
-      // your code goes here
+            // Use createElement() on the document object to create a new `p` element.
+            var p = document.createElement("P");
+
+            // Use `textContent` property and set the text inside `p` to 'Hello Javascript!'.
+            p.textContent = "Hello Javascript!";
+
+            //  Now use the  `innerHTML` property to add HTML inside `p` add `I love <strong>Javascript</strong>`.
+            p.innerHTML = "I love <strong>Javascript</strong>."
+            document.body.appendChild(p);
+
+            // Create a structure like this using js and push it to the document.
+            var ul=document.createElement('ul');
+            var listtext = ["Buy grocery", "Feed the cat", "Do laundry"]
+            for(i=0;i<listtext.length;i++) {
+            var li=document.createElement('li');
+              li.innerHTML = listtext[i];
+              ul.appendChild(li);
+            }
+
+            document.body.appendChild(ul);
+            
+            // Create a new `li` element and push it in the `ul` using `appendChild`.
+            var newli = document.createElement("li");
+            newli.innerHTML = "New list";
+            ul.appendChild(newli);
+
+            // Using `removeChild()` or `remove()` remove an element from the ul.
+            ul.removeChild(ul.childNodes[0]);
     </script>
   </body>
 </html>
