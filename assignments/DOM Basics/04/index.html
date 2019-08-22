@@ -13,4 +13,21 @@
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
   </body>
+    <script type="text/javascript">
+      // Change the body style so it has a font-family of "Arial, sans-serif".
+     document.body.style.fontFamily="Arial, sans-serif"
+
+     // Replace each of the spans (nickname, favorites, hometown) with your own information.
+     document.body.querySelector("ul").children[0].innerText = "ishav"
+     document.body.querySelector("ul").children[1].innerText = "travel"
+     document.body.querySelector("ul").children[2].innerText = "D/shala"
+
+     // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+     document.body.querySelector("ul").className = "listitem"
+     document.body.querySelector("ul").style.color= "red"
+
+     // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+     var x = document.createElement("img");
+    </script>
 </html>
+<im
