@@ -1,8 +1,13 @@
 var quotes;
 
 // Write your code here
-
-
+function author() {
+    var randomNumber = Math.floor((Math.random() * quotes.length));
+    document.getElementById("quoteDisplay").innerText= quotes[randomNumber].quoteText;
+    document.getElementById("quoteAuthor").innerText= quotes[randomNumber].quoteAuthor;
+    }
+    
+document.getElementById("click").addEventListener("click", author);
 
 quotes = [
     {
@@ -314,3 +319,5 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+
